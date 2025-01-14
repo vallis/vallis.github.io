@@ -1,0 +1,57 @@
+{% extends "research.html" %}
+
+{% block content %}
+<h1>Michele's publications</h1>
+
+<div class="row">
+    <h3 class="span7"><em>PhD Thesis</em></h3>
+</div>
+
+<hr/>
+
+<div class="row">
+    <div class="span7">
+        <h3>Modeling and Detecting Gravitational Waves from Compact Stellar Objects</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span7">
+        <p>In the next few years, the first detections of gravity-wave signals using Earth-based
+        interferometric detectors will begin to provide precious new information about the structure,
+        dynamics, and evolution of compact bodies, such as neutron stars and black holes, both isolated and
+        in binary systems. The intrinsic weakness of gravity-wave signals requires a proactive approach to
+        modeling the prospective sources and anticipating the shape of the signals that we seek to detect.
+        Full-blown 3-D numerical simulations of the sources are playing and will play an important role in
+        planning the gravity-wave data-analysis effort. This thesis explores the interplay between numerical
+        source modeling and data analysis, looking closely at three case studies.</p>
+        <p>1. I evaluate the
+        prospects for extracting equation-of-state information from neutron-star tidal disruption in
+        neutron-star--black-hole binaries with LIGO-II, and I estimate that the observation of disrupting
+        systems at distances that yield about one event per year should allow the determination of the
+        neutron-star radius to about 15%, which compares favorably to the currently available
+        electromagnetic determinations.</p>
+        <p>2. In collaboration with Lee Lindblom and Joel Tohline, I perform numerical simulations of the
+        nonlinear dynamics of the r-mode instability in young, rapidly spinning neutron stars, and I find
+        evidence that nonlinear couplings to other modes will not pose a significant limitation to the
+        growth of the r-mode amplitude.</p>
+        <p>3. In collaboration with Alessandra Buonanno and Yanbei Chen, I study the problem of detecting
+        gravity waves from solar-mass black-hole--black-hole binaries with LIGO-I, and I construct two
+        families of detection templates that address the inadequacy of standard post-Newtonian theory to
+        predict reliable waveforms for these systems.</p>
+    </div>
+
+    <div class="span5">
+        <ul>
+            <li>PhD in Theoretical Astrophysics, 2002, <a href="http://www.caltech.edu">California Institute of Technology</a>, Division of Physics, Mathematics and Astronomy.</li>
+            <li>Advisor: Prof. <a href="http://www.its.caltech.edu/~kip" class="black"><b>Kip Thorne</b></a>; committee members: Prof. <b>Ken Libbrecht</b>, Dr. <b>Lee Lindblom</b>, Prof. <b>Marc Kamionkowski</b>. Thesis defended on <b>May 7, 2002</b>.</li>
+            <li>Cite: {{ finditem('tesi-phd',publist) }}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row back">
+    <p class="span12"><a href="../publications.html">Back</a> to publications.</p>
+</div>
+
+{% endblock %}

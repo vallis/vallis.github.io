@@ -1,0 +1,106 @@
+{% extends "research.html" %}
+
+{% block content %}
+<h1>Michele's publications</h1>
+
+<div class="row">
+	<h3 class="span7">Searches for gravitational waves from cosmic-string cusps using Markov Chain Monte Carlo and Nested Sampling</h3>
+</div>
+
+<hr/>
+
+<div class="row">
+	<h3 class="span12">Cosmic strings</h3>
+	<p class="span12"><em>With <b>Michael Cohen</b> and <b>Curt Cutler</b></em></p>
+
+	<div class="span7">
+		<p>A network of observable, macroscopic cosmic (super-)strings may have
+    formed in the early Universe. If so, the cusps that generically develop on
+    <b>cosmic-string loops emit bursts of gravitational radiation</b> that
+    could be detectable by both ground- and space-based gravitational-wave
+    interferometers. Here we report on two versions of a LISA-oriented
+    string-burst search pipeline that we have developed and tested within the
+    context of the <b>Mock LISA Data Challenges</b>.</p>
+	
+		<p>The two versions rely on the publicly available <b>MultiNest</b> and
+    <b>PyMC</b> software packages, respectively. To reduce the effective
+    dimensionality of the search space, our implementations use the
+    F-statistic to analytically maximize over the signal's amplitude and
+    polarization, A and psi, and use the FFT to search quickly over burst
+    arrival times t_C. The standard F-statistic is essentially a frequentist
+    statistic that maximizes the likelihood; we also demonstrate an
+    approximate, <b>Bayesian version of the F-statistic</b> that incorporates
+    realistic priors on A and psi.</p>
+	
+		<p>We calculate how accurately LISA can expect to measure the physical
+    parameters of string-burst sources. To understand LISA's angular
+    resolution for string-burst sources, we draw maps of the waveform fitting
+    factor [maximized over (A psi, t_C)] as a function of sky position; these
+    maps dramatically illustrate why (for LISA) <b>inferring the correct sky
+    location</b> of the emitting string loop will often be <b>practically
+    impossible</b>. We also identify and elucidate several <b>symmetries</b>
+    that are imbedded in this search problem, and we derive the distribution
+    of cut-off frequencies f_max for observable bursts.</p>
+	</div>
+	
+	<div class="span5">
+		<ul>
+			<li>{{ finditem('mldcstrings',publist) }}</li>
+		</ul>
+	</div>
+</div>
+
+<hr/>
+
+<div class="row">
+	<h3 class="span12">Fitting-factor maps</h3>
+	<div class="span7">
+		<div class="thumbnail">
+			<p><script src="http://seadragon.com/embed/lmj.js?width=auto"></script></p>
+			<p>(Displayed with <a href="http://zoom.it">zoom.it</a>; use mouse to zoom and pan, rightmost button to go fullscreen.)</p>
+		</div>
+	</div>
+	
+	<div class="span5">
+		<ul>
+			<li>Figure 2 in the paper, reproduced below in a zoomable version,
+      displays the broad degeneracy of burst signals across the sky, which
+      will limit the resolution of sky position even for high-SNR signals.
+      Each of the small square maps visualizes the <b>fitting factor</b> (the
+      true signal vs. template overlap, maximized over the amplitude,
+      polarization, and time of arrival of the template, and normalized by the
+      amplitude of the true signal) <b>between a true signal at the sky
+      location marked by the blue dot, and templates across the sky</b>.</li>
+			
+			<li>Different square maps correspond to different true-source LISA-plane
+      latitudes (&beta;), longitudes (&lambda;), and polarizations (&psi;).
+      Inside each map the vertical and horizontal axes span the target
+      LISA-plane latitude (&beta;') and longitude (&lambda;'), respectively,
+      with the poles at the top and bottom and the LISA plane at the center.
+      The <b>upper and lower formations of maps</b> correspond to bursts with
+      <b>high- and low-frequency content</b>, respectively.</li>
+		</ul>
+	</div>
+</div>
+
+<div class="row back">
+	<p class="span12"><a href="../publications.html">Back</a> to publications.</p>
+</div>
+
+{% endblock %}
+
+{% block extrascript %}
+$(document).ready(function(){
+	$(".inline").colorbox({inline:true});
+});
+jQuery(".toggle_extra").click(function() {
+  jQuery(this).siblings('.extra').slideToggle();
+  jQuery(this).toggle();
+  jQuery(this).siblings('.untoggle_extra').toggle();
+});
+jQuery(".untoggle_extra").click(function() {
+  jQuery(this).siblings('.extra').slideToggle();
+  jQuery(this).toggle();
+  jQuery(this).siblings('.toggle_extra').toggle();
+});
+{% endblock %}

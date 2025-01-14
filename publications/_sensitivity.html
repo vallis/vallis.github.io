@@ -1,0 +1,77 @@
+{% extends "research.html" %}
+
+{% block content %}
+<h1>Michele's publications</h1>
+
+<div class="row">
+	<h3 class="span7">Sensitivity of LISA-like detectors</h3>
+</div>
+
+<hr/>
+
+<div class="row">
+	<h3 class="span12">Non-sky-averaged sensitivity curves for space-based gravitational-wave observatories</h3>
+	<p class="span12"><em>With <b>Chad R. Galley</b></em></p>
+
+	<div class="span7">
+		<p>The signal-to-noise ratio (SNR) is used in gravitational-wave observations
+		as the basic figure of merit for detection confidence and, together with the
+		Fisher matrix, for the amount of physical information that can be extracted
+		from a detected signal. SNRs are usually computed from a sensitivity curve,
+		which describes the gravitational-wave amplitude needed by a monochromatic
+		source of given frequency to achieve a threshold SNR.</p>
+
+		<p>For interferometric space-based detectors similar to LISA, which are
+		sensitive to long-lived signals and have constantly changing position and
+		orientation, exact SNRs need to be computed on a source-by-source basis. For
+		convenience, most authors prefer to work with sky-averaged sensitivities,
+		accepting inaccurate SNRs for individual sources and giving up control over
+		the statistical distribution of SNRs for source populations.</p>
+
+		<p>In this paper, we describe a straightforward end-to-end recipe to compute
+		the <i>non</i>-sky-averaged sensitivity of interferometric space-based
+		detectors of any geometry. This recipe includes the effects of spacecraft
+		motion and of seasonal variations in the partially subtracted confusion
+		foreground from Galactic binaries, and it can be used to generate a sampling
+		distribution of sensitivities for a given source population. In effect, we
+		derive <i>error bars</i> for the sky-averaged sensitivity curve, which provide
+		a stringent statistical interpretation for previously unqualified statements
+		about sky-averaged SNRs.</p>
+
+		<p>As a worked-out example, we consider isotropic and Galactic-disk
+		populations of monochromatic sources, as observed with the "classic LISA"
+		configuration. We confirm that the (standard) inverse-rms average sensitivity
+		for the isotropic population remains the same whether or not the LISA orbits
+		are included in the computation. However, detector motion tightens the
+		distribution of sensitivities, so for 50% of sources the sensitivity is within
+		30% of its average. For the Galactic-disk population, the average and
+		distribution of the sensitivity for a moving detector turn out to be similar
+		to the isotropic case.</p>
+	</div>
+	
+	<div class="span5">
+		<ul>
+			<li>{{ finditem('lisasens',publist) }}</li>
+			<li>
+				<b>Mathematica code</b><br/>
+				This <a
+        href="http://www.vallis.org/software/SensitivityDistribution-120117.nb">
+        notebook</a> (right-click link to "Save As...") may be used to compute
+        the distribution of squared-SNRs and sensitivities to monochromatic
+        gravitational-wave sources distributed either isotropically or in a
+        Galactic disk, as observed by a "classic LISA" detector. The code can
+        be extended to include chirp waveforms of inspiraling binaries,
+        horizon distance computations, other source distributions and
+        polarizations, and alternative spacecraft configurations and orbits.
+			</li>
+		</ul>
+	</div>
+</div>
+
+<hr/>
+
+<div class="row back">
+	<p class="span12"><a href="../publications.html">Back</a> to publications.</p>
+</div>
+
+{% endblock %}
